@@ -1,0 +1,146 @@
+ {% extends 'base.html.twig' %} {% block title %}Commande{% endblock
+%} {% block body %}
+<div class="row mt-5"></div>
+    <!--Section: Main info-->
+    <section class="mt-5 wow fadeIn px-4">
+        <!--Grid row-->
+        <div class="row">
+          
+          <!--Grid column-->
+          <div class="col-md-3 mb-4 text-center">
+            {% include ("recaputilatif/_recap.html.twig") %}
+          </div>
+          <div class="col-md-9 mb-4">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb orange lighten">
+                <li class="breadcrumb-item white-text">
+                  <a class="white-text" href="{{path('commande_index')}}">information personnelle</a>
+                  <i class="fas fa-angle-double-right mx-2" aria-hidden="true"></i>
+                </li>
+                <li class="breadcrumb-item white-text">Choisir votre offre
+                  <i class="fas fa-angle-double-right mx-2" aria-hidden="true"></i>
+                </li>
+                <li class="breadcrumb-item active">Détail de la commande
+                  <i class="fas fa-angle-double-right mx-2" aria-hidden="true"></i>
+                </li>
+                <li class="breadcrumb-item active">Livraison</li>
+              </ol>
+            </nav>
+            <div>
+                <h2 class="text-center">
+                  Sélectionnez les offres que vous souhaitez
+                </h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <!-- Card -->
+                        <div class="card card-cascade wider reverse">
+                          <!-- Card image -->
+                          <div class="view view-cascade overlay">
+                            <img
+                              class="card-img-top"
+                              src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg"
+                              alt="Card image cap"
+                            />
+                            <a href="{{path('commande_detail')}}">
+                              <div class="mask rgba-white-slight"></div>
+                            </a>
+                          </div>
+                          <!-- Card content -->
+                          <div class="card-body card-body-cascade text-center">
+                            <!-- Title -->
+                            <h6 class="card-title indigo-text">
+                              <strong>Recupération,Lavé,livré </strong>
+                            </h6>
+                            <!-- Text -->
+                            <p class="card-text">
+                              Nous partons chez vous pour recupérer vos vêtements, nous les lavons puis nous vous les livrons chez vous.
+                            </p>
+                            <p class="card-text">
+                                Cette option a un fais de 3000f pour les déplacement.
+                              </p>
+                            <div class="text-center">
+                              <a href="{{path('commande_detail')}}" class="btn btn-warning btn-rounded"
+                                >Choisir</a
+                              >
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Card -->
+                      </div>
+                  <div class="col-md-4">
+                    <!-- Card -->
+                    <div class="card card-cascade wider reverse">
+                      <!-- Card image -->
+                      <div class="view view-cascade overlay">
+                        <img
+                          class="card-img-top"
+                          src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg"
+                          alt="Card image cap"
+                        />
+                        <a href="{{path('commande_detail')}}">
+                          <div class="mask rgba-white-slight"></div>
+                        </a>
+                      </div>
+                      <!-- Card content -->
+                      <div class="card-body card-body-cascade text-center">
+                        <!-- Title -->
+                        <h6 class="card-title indigo-text">
+                          <strong>Recupération,Lavé</strong>
+                        </h6>
+                        <p class="card-text">
+                            Nous partons chez vous pour recupérer vos vêtements, nous les lavons puis vous venez les recupérer au magasin.
+                          </p>
+                          <p class="card-text">
+                              Cette option a un fais de 1500f pour les déplacement.
+                            </p>
+                          <div class="text-center">
+                            <a href="{{path('commande_detail')}}" class="btn btn-warning btn-rounded"
+                              >Choisir</a
+                            >
+                          </div>
+                      </div>
+                    </div>
+                    <!-- Card -->
+                  </div>
+                  <div class="col-md-4">
+                    <!-- Card -->
+                    <div class="card card-cascade wider reverse">
+                      <!-- Card image -->
+                      <div class="view view-cascade overlay">
+                        <img
+                          class="card-img-top"
+                          src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg"
+                          alt="Card image cap"
+                        />
+                        <a href="{{path('commande_detail')}}">
+                          <div class="mask rgba-white-slight"></div>
+                        </a>
+                      </div>
+                      <!-- Card content -->
+                      <div class="card-body card-body-cascade text-center">
+                        <!-- Title -->
+                        <h6 class="card-title indigo-text">
+                          <strong>Lavé,livré</strong>
+                        </h6>
+                        <p class="card-text">
+                            Nous lavons puis nous vous les livrons chez vous.
+                          </p><br><br>
+                          <p class="card-text">
+                              Cette option a un fais de 1500f pour les déplacement.
+                            </p>
+                          <div class="text-center">
+                            <a href="{{path('commande_detail')}}" class="btn btn-warning btn-rounded"
+                              >Choisir</a
+                            >
+                          </div>
+                      </div>
+                    </div>
+                    <!-- Card -->
+                  </div>
+                </div>
+              </div>
+               </div>
+        <!--Grid row-->
+      </section>
+       <!--Section: Main info-->
+{% endblock %}

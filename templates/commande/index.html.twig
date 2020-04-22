@@ -1,0 +1,114 @@
+{% extends 'base.html.twig' %} {% block title %}Commande{% endblock
+%} {% block body %}
+<div class="row mt-5"></div>
+    <!--Section: Main info-->
+    <section class="mt-5 wow fadeIn px-4">
+        <!--Grid row-->
+        <div class="row">
+          
+          <!--Grid column-->
+          <div class="col-md-3 mb-4 text-center">
+            {% include ("recaputilatif/_recap.html.twig") %}
+          </div>
+  
+          <div class="col-md-9 mb-4">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb orange lighten">
+                <li class="breadcrumb-item white-text">
+                  information personnelle
+                  <i class="fas fa-angle-double-right mx-2" aria-hidden="true"></i>
+                </li>
+                <li class="breadcrumb-item active">Choisir votre offre
+                  <i class="fas fa-angle-double-right mx-2" aria-hidden="true"></i>
+                </li>
+                <li class="breadcrumb-item active">Détail de la commande
+                  <i class="fas fa-angle-double-right mx-2" aria-hidden="true"></i>
+                </li>
+                <li class="breadcrumb-item active">Livraison</li>
+              </ol>
+            </nav>
+            
+            <div>
+              <div>
+                <form>
+                  <div class="form-row">
+                    <!-- Grid column -->
+                    <div class="col">
+                      <div class="form-group">
+                        <label for="nom">Nom</label>
+                        <input
+                          class="form-control"
+                          id="nom"
+                          type="text"
+                          placeholder="nom"
+                        />
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="form-group">
+                        <label for="prenom">Prenom</label>
+                        <input
+                          class="form-control"
+                          id="prenom"
+                          type="text"
+                          placeholder="prenom"
+                        />
+                      </div>
+                    </div>
+                    <!-- Grid column -->
+                  </div>
+                  <div class="form-row">
+                    <div class="col">
+                      <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input
+                          class="form-control"
+                          id="email"
+                          type="email"
+                          placeholder="E-mail"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <!-- Grid column -->
+                    <div class="col">
+                      <div class="form-group">
+                        <label for="numero">Numéro tel</label>
+                        <input
+                          class="form-control"
+                          id="numero"
+                          type="number"
+                          placeholder="Numéro tel"
+                        />
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="form-group">
+                        <label for="exampleFormControlSelect1">Commnune</label>
+                        <select class="browser-default custom-select">
+                          <option selected>votre choix</option>
+                          <option value="1">ABOBO</option>
+                          <option value="2">YOPOUGON</option>
+                          <option value="3">COCODY</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!-- Grid column -->
+                  </div>
+                  <div class="text-center">
+                    <a href="{{path('commande_offre')}}" class="btn btn-warning btn-rounded">
+                      Suivant
+                    </a>
+                  </div>
+                </form>
+              </div>
+              
+              
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </section>
+      <!--Section: Main info-->
+{% endblock %}

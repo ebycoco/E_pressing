@@ -1,0 +1,5 @@
+{% include ("partials/header.html.twig") with {"title": block("title")} %}
+    {% include ("partials/navbar.html.twig") %}
+         {% block body %}{% endblock %}
+    {% include ("partials/footer.html.twig") %}
+        

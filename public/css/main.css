@@ -1,0 +1,20 @@
+.arriere{
+    background: #43c0f9;
+    color:#fff;
+}
+.titre{
+    font-size: 22px;
+    font-weight: bold;
+}
+.menue a :hover{
+    background: #f39c12;
+    color: #fff;
+    
+}
+.pt-3-half {
+    padding-top: 1.4rem;
+    }
+.bc-icons .breadcrumb-item + .breadcrumb-item::before {
+    content: none; }
+    .bc-icons .breadcrumb-item.active {
+    color: #eeeeee; }

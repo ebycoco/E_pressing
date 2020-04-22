@@ -1,0 +1,178 @@
+ {% extends 'base.html.twig' %} {% block title %}Commande{% endblock
+%} {% block body %}
+<div class="row mt-5"></div>
+    <!--Section: Main info-->
+    <section class="mt-5 wow fadeIn px-4">
+        <!--Grid row-->
+        <div class="row">
+          
+          <!--Grid column-->
+          <div class="col-md-3 mb-4 text-center">
+            {% include ("recaputilatif/_recap.html.twig") %}
+          </div>
+          <div class="col-md-9 mb-4">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb orange lighten">
+                <li class="breadcrumb-item white-text">
+                  <a class="white-text" href="{{path('commande_index')}}">information personnelle</a>
+                  <i class="fas fa-angle-double-right mx-2" aria-hidden="true"></i>
+                </li>
+                <li class="breadcrumb-item white-text">
+                    <a class="white-text" href="{{path('commande_offre')}}">Choisir votre offre</a>
+                  <i class="fas fa-angle-double-right mx-2" aria-hidden="true"></i>
+                </li>
+                <li class="breadcrumb-item white-text">Détail de la commande
+                  <i class="fas fa-angle-double-right mx-2" aria-hidden="true"></i>
+                </li>
+                <li class="breadcrumb-item active">Livraison</li>
+              </ol>
+            </nav>
+            <div>
+                <div class="row">
+                  <div class="col-md-6 text-center">
+                    <div class="card">
+                      <h3
+                        class="card-header text-center font-weight-bold text-uppercase py-4"
+                      >
+                        Liste des vêtements
+                      </h3>
+                      <div class="card-body">
+                        <div id="table" class="table-editable">
+                          <table
+                            class="table table-bordered table-responsive-md table-striped text-center"
+                          >
+                            <thead>
+                              <tr>
+                                <th class="text-center">Vêtements</th>
+                                <th class="text-center">Prix</th>
+                                <th class="text-center">Enlever</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <!-- This is our clonable table line -->
+                              <tr>
+                                <td class="pt-3-half" contenteditable="true">
+                                  Guadalupe House
+                                </td>
+                                <td class="pt-3-half" contenteditable="true">
+                                  26000
+                                </td>
+                                <td>
+                                  <span class="table-remove"
+                                    ><button
+                                      type="button"
+                                      class="btn btn-danger btn-rounded btn-sm my-0"
+                                    >
+                                      <i
+                                        class="far fa-trash-alt fa-2x"
+                                      ></i></button
+                                  ></span>
+                                </td>
+                              </tr>
+                              <!-- This is our clonable table line -->
+                              <tr class="hide">
+                                <td class="pt-3-half" contenteditable="true">
+                                  Elisa Gallagher
+                                </td>
+                                <td class="pt-3-half" contenteditable="true">
+                                  31000
+                                </td>
+                                <td>
+                                  <span class="table-remove"
+                                    ><button
+                                      type="button"
+                                      class="btn btn-danger btn-rounded btn-sm my-0"
+                                    >
+                                      <i
+                                        class="far fa-trash-alt fa-2x"
+                                      ></i></button
+                                  ></span>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="row">
+                          <div class="col-6">
+                            <b style="font-weight: bold; text-align: justify;"
+                              >TOTAL : 3200 F</b
+                            >
+                          </div>
+                          <div class="col-6"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Editable table -->
+                    
+                  </div>
+                  
+                  <div class="col-md-6">
+                    <form>
+                      <div class="form-row">
+                        <!-- Grid column -->
+                        <div class="col">
+                          <div class="form-group">
+                            <label for="exampleFormControlSelect1"
+                              >vêtement</label
+                            >
+                            <select class="browser-default custom-select">
+                              <option selected>faite votre choix</option>
+                              <option value="1">Pantalon jean</option>
+                              <option value="2">Drap</option>
+                              <option value="3">chemise</option>
+                            </select>
+                          </div>
+                        </div>
+                        <!-- Grid column -->
+  
+                        <!-- Grid column -->
+                        <div class="col">
+                          <div class="form-group">
+                            <label for="numero">Quantiter</label>
+                            <input
+                              class="form-control"
+                              id="numero"
+                              type="number"
+                              placeholder="Entrer le nombre"
+                            />
+                          </div>
+                        </div>
+                        <!-- Grid column -->
+                      </div>
+                    </form>
+                    <!-- Card -->
+                    <div class="card">
+                      <!-- Card content -->
+                      <div class="card-body">
+                        <!-- Title -->
+                        <h4 class="card-title text-center text-uppercase">
+                          prix: 700F
+                        </h4>
+                        <!-- Button -->
+                        <div class="text-center">
+                          <a
+                            href=""
+                            class="btn btn-warning btn-rounded"
+                            data-toggle="modal"
+                            data-target="#modalQuickView"
+                            ><i class="fas fa-plus"></i> Ajouter</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Card -->
+                    <a href="{{path('commande_livraison')}}" class="btn btn-info">Suivant</a>
+                    <!-- Modal: modalQuickView -->
+                      <div class="modal fade" id="modalQuickView" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                    {% include ("modal/modal_ajout.html.twig") %}
+                    </div>
+                    <!-- Modal: modalAbandonedCart-->
+                  </div>
+                </div>
+              </div>
+               </div>
+        <!--Grid row-->
+      </section>
+       <!--Section: Main info-->
+{% endblock %}
